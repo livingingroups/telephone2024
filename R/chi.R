@@ -1,4 +1,5 @@
 chi_function <- function(word){
+  # maybe call this index
   input_word<-which(all_english_words==word)
   similar_word<-all_english_words[input_word-1]
 
