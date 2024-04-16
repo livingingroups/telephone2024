@@ -5,7 +5,7 @@ laura_function <- function(word){
   vow <- word_sep %in% vowels # is a vowel?
   randvow <- sample(vowels, 1) #pick a random vowel
   word_sep[vow][1]<- randvow  #replace first vowel with random vowel
-  a <- paste(x, collapse = "") #put word back together
+  a <- paste(word_sep, collapse = "") #put word back together
 
   #search for pattern in all words
   x <- unlist(strsplit(a, split=""))
@@ -25,3 +25,4 @@ laura_function <- function(word){
   return(word)
 
 }
+
