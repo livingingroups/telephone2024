@@ -11,7 +11,10 @@
 telephone <- function(word) {
   player_functions <- list(
     brock_function,
-    marius_function
+    laura_function,
+    julia_function,
+    marius_function,
+    chi_function
   )
 
   words <- word
