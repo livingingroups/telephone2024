@@ -22,4 +22,6 @@ laura_function <- function(word){
   z<- grep(y2, all_english_words)
   word <- sample(all_english_words[z],1)}
 
-  return(word
+  return(word)
+
+}
