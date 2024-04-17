@@ -13,15 +13,23 @@ laura_function <- function(word){
   y <- x[1:3] # take first three letters
   y2 <- paste(y, collapse = "")
   z<- grep(y2, all_english_words) #search for those letters in the dictionary
-  word <- sample(all_english_words[z],1) #choose random word
   }
 
   else{ #for when word is only 1 or 2 letters long
   y <- x[1:length(x)]
   y2 <- paste(y, collapse = "")
   z<- grep(y2, all_english_words)
-  word <- sample(all_english_words[z],1)}
+  }
 
+  if(length(z) > 0){
+    # if there are words matching this criteria
+    # chose one of those words at random
+    word <- sample(all_english_words[z],1)
+  } else {
+    # else rearrange the letters in the input word
+    letters_in_word <- strsplit(word, '')[[1]]
+    word <- paste0(sample(letters_in_word, length(letters_in_word)), collapse='')
+  }
   return(word)
 
 }
